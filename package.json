@@ -1,0 +1,19 @@
+{
+  "name": "projet_3_ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarionGirard33/Projet_3_Ohmyfood.git"
+  },
+  "author": "Marion Girard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarionGirard33/Projet_3_Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/MarionGirard33/Projet_3_Ohmyfood#readme"
+}
