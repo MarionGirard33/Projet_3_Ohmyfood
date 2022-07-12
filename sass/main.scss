@@ -1,4 +1,17 @@
-body
-{
-    font-size: 20px;
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/footer";
+
+body {
+    img {
+        width: 300px;
+    }
 }
