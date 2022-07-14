@@ -1,5 +1,11 @@
 /*Déclaration des couleurs*/
 
-$primaire_violet:#9356DC;
-$secondaire_rose:#FF79DA;
-$tertiaire_vert:#99E2D0;
+$primary_purple:#9356DC;
+$secondary_pink:#FF79DA;
+$tertiary_green:#99E2D0;
+
+$background_gray: #f6f6f6;
+
+$hover_purple: lighten($color: $primary_purple, $amount: 3);
+$hover_pink: lighten($color: $secondary_pink, $amount: 3);
+$hover-background: darken($color: $background_gray, $amount: 30)

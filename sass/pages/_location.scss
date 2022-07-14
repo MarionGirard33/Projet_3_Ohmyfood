@@ -1,0 +1,22 @@
+.location {
+    background-color: #eaeaea;
+    box-shadow: inset 0px 3px 3px darken($color: #eaeaea, $amount: 10);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4% 0 4% 0;
+    form {
+        display: flex;
+        align-items: center;
+        color: #353535;
+        input {
+            background-color: #eaeaea;
+            padding-left: 4%;
+            border: none;
+            outline: none;
+        }
+        i {
+            padding: 0 5% 0 5%;
+        }
+    }
+}

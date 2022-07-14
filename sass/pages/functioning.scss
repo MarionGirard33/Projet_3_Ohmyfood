@@ -1,0 +1,32 @@
+.functioning {
+    width: 100%;
+    padding-bottom: 12%;
+    h2 {
+        padding: 6% 0 2% 6%;
+    }
+    &__steps {
+        padding-left: 0px;
+        li {
+            height: 30px;
+            background-color: $background_gray;
+            margin: 0 5% 7% 8%;
+            padding: 30px 30px 15px 35px;
+            display: flex;
+            align-items: baseline;
+            border-radius: 25px;
+            box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+            &:hover{
+                background: lighten($color: $primary_purple, $amount: 36);
+                box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 15);
+                i {
+                    color: $primary_purple;
+                }
+            }
+        }
+        i {
+            color: #7e7e7e;
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+    }
+}
