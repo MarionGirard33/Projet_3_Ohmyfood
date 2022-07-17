@@ -7,11 +7,16 @@ footer {
     ul {
         padding-left: 0px;
         line-height: 25px;
+
         a {
             color: #fff;
+            display: flex;
+            align-items: center;
         }
         i {
-            font-size: 0.7em;
+            width: 13px;
+            font-size: 0.8em;
+            margin-right: 12px;
         }
     }
 }

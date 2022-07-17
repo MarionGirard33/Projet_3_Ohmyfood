@@ -1,6 +1,7 @@
 .restaurants {
     background-color: $background_gray;
     padding: 8% 5% 13% 5%;
+    position: relative;
     article {
         width: 100%;
         display: flex;
@@ -11,6 +12,15 @@
         width: 100%;
         object-fit: cover;
         border-radius: 18px 18px 0 0;
+    }
+    span {
+        background-color:#99e2d0 ;
+        color: #008766;
+        font-weight: bold;
+        font-size: 0.9em;
+        padding: 2% 5% 2% 5%;
+        position: absolute;
+        top: 12px; right: 12px;
     }
     &__card {
         height: 250px;

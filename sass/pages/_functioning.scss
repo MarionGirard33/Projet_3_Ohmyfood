@@ -11,10 +11,25 @@
             background-color: $background_gray;
             margin: 0 5% 7% 8%;
             padding: 30px 30px 15px 35px;
-            display: flex;
-            align-items: baseline;
             border-radius: 25px;
             box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+            list-style-type: none;
+            position: relative;
+            &::before{
+                counter-increment: step;
+                content:counter(step);
+                background-color: $primary_purple;
+                color:#fff;
+                font-size: 0.8em;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                border-radius: 25px;
+                position: absolute;
+                left: -12px;top: 28px;
+            }
             &:hover{
                 background: lighten($color: $primary_purple, $amount: 36);
                 box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 15);
