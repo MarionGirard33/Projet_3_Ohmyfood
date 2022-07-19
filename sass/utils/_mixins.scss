@@ -13,3 +13,20 @@
         color: white;
     }
 }
+
+@mixin hover {
+    &:hover{
+    box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 15);
+    transform: scale(1.02);
+    }
+}
+
+@mixin hover_purple {
+    &:hover{
+    background: lighten($color: $primary_purple, $amount: 36);
+    box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 15);
+    }
+    i {
+        color: $primary_purple;
+    }
+}

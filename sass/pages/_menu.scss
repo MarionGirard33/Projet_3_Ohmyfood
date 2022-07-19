@@ -27,12 +27,17 @@
     padding: 0 0 40px 15px;
     position: relative;
     h5 {
-        margin-bottom: 0px;
+        margin: 38px 0 0 0;
     }
-    i {
+    .heart {
         font-size: 1.6em;
         position: absolute;
         right: 30px; top: 40px;
+        &:hover {
+            
+            animation : heart 2000ms linear forwards;
+            opacity: 1;
+        }
         }
     .button {
         margin: 45px 80px 20px 80px;
@@ -41,20 +46,94 @@
 
 .menu {
     h6 {
-        margin: 36px 0 22px 2px;
+        margin: 32px 0 22px 2px;
     }
     &__item {
-        background-color: #ffffff;
         display: flex;
-        justify-content: space-between;
-        line-height: 8px;
-        border-radius: 12px;
-        padding: 0 20px 3px 14px;
-        margin: 15px 12px 0 0;
-        box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+        flex-direction: row;
+        margin-right: 10px;
+        position: relative;
+        animation: menus-appear 1000ms linear backwards;
+        transform: translateY(5px);
+        &__info {
+            width:100%;
+            height: 70px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 12px;
+            padding-left: 12px;
+            margin-bottom: 12px;
+            box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+            overflow: hidden;
+        }
+
+        &__description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            h3 {
+                margin: 12px 10px 0 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            p {
+                margin: 8px 10px 0 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
         &__price {
             font-weight: bold;
-            padding-top: 45px;
+            padding: 40px 30px 0 0;
+        }
+        
+        &--checked {
+            width: 0%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            background-color: $tertiary_green;
+            font-size: 1.2em;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 15px;
+            position: relative;
+            right:10px;
+            transform: translate(9999px);
+            transition: width 500ms ease-in-out;
+            .fa-circle-check {
+                transform: rotate(-360deg);
+                transition: transform 500ms ease-in-out;
+              }
+        }
+
+        &:hover &--checked{
+            width: 20%;
+            height: 70px;
+            transform: translate(0);
+            box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+        } 
+
+        &:hover .fa-circle-check {
+            transform: rotate(0deg);
         }
     }
 }
+
+@for $i from 1 through 4 {
+    .delay-#{$i}{
+    animation-delay: calc(250ms*$i);
+    }
+}
+            
+
+
+        
+    
+    
+

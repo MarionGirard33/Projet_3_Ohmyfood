@@ -12,6 +12,8 @@ body {
 
 h4 {
     font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 h1 {
@@ -28,17 +30,19 @@ h1, h2, h3 {
 
 h5 {
     font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
     font-size: 1.7em;
 }
 
 h6 {
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 1em;
 }
 
 .location {
     input {
-    font-weight: 900;
+    font-weight: 700;
     }
 }
 

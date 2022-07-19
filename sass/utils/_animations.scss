@@ -1,0 +1,27 @@
+@keyframes menus-appear {
+    0% {
+        opacity:(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity:(1);
+        transform: translateY(5px);
+    }
+  }
+
+  @keyframes heart {
+    0% {
+        font-weight: 500;
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        background-clip: text;
+        font-weight: bold;
+        color:linear-gradient(to top,$secondary_pink,$primary_purple);
+        opacity: 1;
+
+
+    }
+  }
