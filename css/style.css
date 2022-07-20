@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*Déclaration des couleurs*/
+/*Déclaration des couleurs*/ /*animation menus*/
 @keyframes menus-appear {
   0% {
     opacity: 0;
@@ -10,18 +10,84 @@
     transform: translateY(5px);
   }
 }
-@keyframes heart {
+/*animation coeurs*/
+@keyframes empty-heart {
   0% {
-    font-weight: 500;
-    background-clip: text;
-    color: transparent;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes full-heart {
+  0% {
     opacity: 0;
   }
   100% {
-    background-clip: text;
-    font-weight: bold;
-    color: linear-gradient(to top, #FF79DA, #9356DC);
     opacity: 1;
+  }
+}
+/*animation loader*/
+@keyframes ingredient {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.5) translate(0, 10px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1) translate(0, 20px);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1) translate(0, 30px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translate(0, 60px);
+    opacity: 0;
+  }
+}
+@keyframes green-tub {
+  0% {
+    transform: translate(0, 1);
+  }
+  10% {
+    transform: translate(0, -10%) rotate(-20deg);
+  }
+  20% {
+    transform: translate(0, 10%) rotate(10deg);
+  }
+  40% {
+    transform: translate(0, -40%);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 1) rotate(0deg);
+  }
+}
+@keyframes purple-tub {
+  0% {
+    transform: translate(0, 1);
+  }
+  10% {
+    transform: translate(0, -10%) rotate(20deg);
+  }
+  20% {
+    transform: translate(0, 10%) rotate(-10deg);
+  }
+  40% {
+    transform: translate(0, -40%);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 1) rotate(0deg);
   }
 }
 body {
@@ -81,6 +147,157 @@ h6 {
 
 .card p, .card span {
   font-size: 0.9em;
+}
+
+.loader {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.loader__tub {
+  display: flex;
+  width: 160px;
+  justify-content: space-between;
+  position: relative;
+  top: 50px;
+}
+.loader__ingredient {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader__plate {
+  width: 150px;
+  height: 20px;
+  background-color: #FF79DA;
+  border-radius: 0 0 60px 60px;
+  position: relative;
+  top: 20px;
+}
+
+.green_tub {
+  transform-origin: 0% 50%;
+  width: 40px;
+  height: 100px;
+  background: #99E2D0;
+  animation: green-tub 2000ms infinite backwards;
+}
+
+.purple_tub {
+  transform-origin: 100% 50%;
+  width: 40px;
+  height: 100px;
+  background: #9356DC;
+  animation: purple-tub 2000ms 500ms infinite backwards;
+}
+
+.green_ingredient {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 25px;
+  background: #99E2D0;
+  opacity: 1;
+  animation: ingredient 2000ms infinite linear backwards;
+}
+.green_ingredient--1 {
+  top: -15px;
+  right: 25px;
+}
+.green_ingredient--2 {
+  top: 30px;
+  right: 10px;
+}
+.green_ingredient--3 {
+  top: -10px;
+  right: 2px;
+}
+.green_ingredient--4 {
+  top: -40px;
+  right: 35px;
+}
+.green_ingredient--5 {
+  top: 70px;
+  right: 20px;
+}
+.green_ingredient--6 {
+  top: 55px;
+  right: 0px;
+}
+.green_ingredient--1 {
+  animation-delay: 166.6666666667ms;
+}
+.green_ingredient--2 {
+  animation-delay: 333.3333333333ms;
+}
+.green_ingredient--3 {
+  animation-delay: 500ms;
+}
+.green_ingredient--4 {
+  animation-delay: 666.6666666667ms;
+}
+.green_ingredient--5 {
+  animation-delay: 833.3333333333ms;
+}
+.green_ingredient--6 {
+  animation-delay: 1000ms;
+}
+
+.purple_ingredient {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 25px;
+  background-color: #9356DC;
+  opacity: 1;
+  animation: ingredient 2000ms infinite linear backwards;
+}
+.purple_ingredient--1 {
+  top: 32px;
+  left: -20px;
+}
+.purple_ingredient--2 {
+  top: 30px;
+  left: 20px;
+}
+.purple_ingredient--3 {
+  top: -10px;
+  left: 2px;
+}
+.purple_ingredient--4 {
+  top: -45px;
+  right: -28px;
+}
+.purple_ingredient--5 {
+  top: 5px;
+  left: 20px;
+}
+.purple_ingredient--6 {
+  top: 65px;
+  left: -20px;
+}
+.purple_ingredient--1 {
+  animation-delay: 166.6666666667ms;
+}
+.purple_ingredient--2 {
+  animation-delay: 333.3333333333ms;
+}
+.purple_ingredient--3 {
+  animation-delay: 500ms;
+}
+.purple_ingredient--4 {
+  animation-delay: 666.6666666667ms;
+}
+.purple_ingredient--5 {
+  animation-delay: 833.3333333333ms;
+}
+.purple_ingredient--6 {
+  animation-delay: 1000ms;
 }
 
 .button {
@@ -249,11 +466,28 @@ footer ul i {
   line-height: 10px;
   margin-left: 15px;
 }
-.restaurants__card__corps i {
+.restaurants__card__corps .empty-heart {
   font-size: 1.6em;
-  position: relative;
-  left: 260px;
-  bottom: 50px;
+  position: absolute;
+  right: 25px;
+  bottom: 28px;
+  opacity: 1;
+}
+.restaurants__card__corps .empty-heart:hover {
+  animation: empty-heart 600ms linear forwards;
+}
+.restaurants__card__corps .full-heart {
+  font-size: 1.6em;
+  position: absolute;
+  right: 25px;
+  bottom: 28px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.restaurants__card__corps .full-heart:hover {
+  animation: full-heart 600ms linear forwards;
 }
 .restaurants__card:hover {
   box-shadow: 4px 4px 8px #d0d0d0;
@@ -291,18 +525,31 @@ footer ul i {
 .card h5 {
   margin: 38px 0 0 0;
 }
-.card .heart {
+.card .button {
+  margin: 45px 80px 20px 80px;
+}
+.card .empty-heart {
   font-size: 1.6em;
   position: absolute;
   right: 30px;
   top: 40px;
-}
-.card .heart:hover {
-  animation: heart 2000ms linear forwards;
   opacity: 1;
 }
-.card .button {
-  margin: 45px 80px 20px 80px;
+.card .empty-heart:hover {
+  animation: empty-heart 600ms linear forwards;
+}
+.card .full-heart {
+  font-size: 1.6em;
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.card .full-heart:hover {
+  animation: full-heart 600ms linear forwards;
 }
 
 .menu h6 {

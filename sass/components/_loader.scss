@@ -1,0 +1,128 @@
+.loader {
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background_gray;
+
+    &__tub {
+        display: flex;
+        width: 160px;
+        justify-content: space-between;
+        position: relative;
+        top: 50px;
+    }
+    &__ingredient {
+        width: 400px;
+        height: 200px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    &__plate {
+        width: 150px;
+        height: 20px;
+        background-color: #FF79DA;
+        border-radius: 0 0 60px 60px;
+        position: relative;
+        top: 20px;
+    }
+}
+
+.green_tub {
+    transform-origin: 0% 50%;
+    width: 40px;
+    height: 100px;
+    background: #99E2D0;
+    animation: green-tub $ingredient-timing infinite backwards;
+}
+.purple_tub {
+    transform-origin: 100% 50%;
+    width: 40px;
+    height: 100px;
+    background: #9356DC;
+    animation: purple-tub $ingredient-timing 500ms infinite backwards;
+}
+  
+.green_ingredient {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    background: #99E2D0;
+    opacity: 1;
+    &--1 {
+        top: -15px;
+        right: 25px;
+    }
+    &--2 {
+        top: 30px;
+        right: 10px;
+    }
+    &--3 {
+        top: -10px;
+        right: 2px;
+    }
+    &--4 {
+        top: -40px;
+        right: 35px;
+    }
+    &--5 {
+        top: 70px;
+        right: 20px;
+    }
+    &--6 {
+        top: 55px;
+        right: 0px;
+    }
+    animation: ingredient $ingredient-timing infinite linear backwards;
+    @for $i from 1 through $nb-ingredient {
+      &--#{$i} {
+        animation-delay: $ingredient-delay * ((0.5)* $i);
+      }
+    }
+}
+  
+.purple_ingredient {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 25px;
+    background-color: #9356DC;
+    opacity: 1;
+    &--1 {
+        top: 32px;
+        left: -20px;
+      }
+      &--2 {
+        top: 30px;
+        left: 20px;
+      }
+      &--3 {
+        top: -10px;
+        left: 2px;
+      }
+      &--4 {
+        top: -45px;
+        right: -28px;
+      }
+      &--5 {
+        top: 5px;
+        left: 20px;
+      }
+      &--6 {
+        top: 65px;
+        left: -20px;
+      }
+      animation: ingredient $ingredient-timing infinite linear backwards;
+      @for $i from 1 through $nb-ingredient {
+        &--#{$i} {
+          animation-delay: $ingredient-delay * ((0.5)* $i);
+        }
+      }
+}  
+
+
+
+  

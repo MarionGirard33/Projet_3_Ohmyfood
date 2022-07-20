@@ -29,18 +29,11 @@
     h5 {
         margin: 38px 0 0 0;
     }
-    .heart {
-        font-size: 1.6em;
-        position: absolute;
-        right: 30px; top: 40px;
-        &:hover {
-            
-            animation : heart 2000ms linear forwards;
-            opacity: 1;
-        }
-        }
     .button {
         margin: 45px 80px 20px 80px;
+    }
+    @include heart {
+        right: 30px; top: 40px;
     }
 }
 

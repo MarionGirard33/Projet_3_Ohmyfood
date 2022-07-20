@@ -30,3 +30,27 @@
         color: $primary_purple;
     }
 }
+
+@mixin heart {
+    .empty-heart {
+        font-size: 1.6em;
+        position: absolute;
+        @content;
+        opacity: 1;
+        &:hover {
+            animation : empty-heart 600ms linear forwards;
+        }
+    }
+    .full-heart {
+        font-size: 1.6em;
+        position: absolute;
+        @content;
+        background: -webkit-gradient(linear, left top, left bottom, from($primary_purple), to($secondary_pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        &:hover {       
+            animation : full-heart 600ms linear forwards;
+        }
+    }
+}

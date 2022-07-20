@@ -31,15 +31,12 @@
         &__corps  {
             line-height: 10px;
             margin-left: 15px;
-            i {
-            font-size: 1.6em;
-            position: relative;
-            left: 260px; bottom: 50px;
+            @include heart {
+                right: 25px; bottom: 28px;
             }
         }
         transform: scale(1);
         transition: transform 400ms;
         @include hover;
     }
-
 }

@@ -1,3 +1,4 @@
+/*animation menus*/
 @keyframes menus-appear {
     0% {
         opacity:(0);
@@ -9,19 +10,94 @@
     }
   }
 
-  @keyframes heart {
+  /*animation coeurs*/
+  @keyframes empty-heart {
     0% {
-        font-weight: 500;
-        background-clip: text;
-        color: transparent;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+
+  @keyframes full-heart {
+    0% {
         opacity: 0;
     }
     100%{
-        background-clip: text;
-        font-weight: bold;
-        color:linear-gradient(to top,$secondary_pink,$primary_purple);
         opacity: 1;
-
-
     }
   }
+
+  /*animation loader*/
+
+  
+  $ingredient-timing: 2000ms;
+  $nb-ingredient:6;
+  $ingredient-delay: $ingredient-timing / $nb-ingredient;
+  
+@keyframes ingredient {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0.5) translate(0, 10px);
+    opacity: 0.5; 
+  }
+  50% {
+    transform: scale(1) translate(0, 20px);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1) translate(0, 30px);
+    opacity: 1; 
+  }
+  100% {
+    transform: scale(1) translate(0, 60px);
+    opacity: 0;
+  }
+}
+
+@keyframes green-tub {
+    0% {
+        transform: translate(0, 1);
+      }
+      10% {
+        transform: translate(0, -10%) rotate(-20deg);
+      }
+      20% {
+        transform: translate(0, 10%) rotate(10deg);
+      }
+      40% {
+        transform: translate(0, -40%);
+      }
+      90% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: translate(0,1) rotate(0deg);
+      }
+  }
+
+@keyframes purple-tub {
+    0% {
+      transform: translate(0, 1);
+    }
+    10% {
+      transform: translate(0, -10%) rotate(20deg);
+    }
+    20% {
+      transform: translate(0, 10%) rotate(-10deg);
+    }
+    40% {
+      transform: translate(0, -40%);
+    }
+    90% {
+        transform: rotate(10deg);
+      }
+    100% {
+      transform: translate(0,1) rotate(0deg);
+    }
+  }
+
