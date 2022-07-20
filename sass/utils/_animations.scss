@@ -64,7 +64,7 @@
         transform: translate(0, 1);
       }
       10% {
-        transform: translate(0, -10%) rotate(-20deg);
+        transform: translate(0, -10%) rotate(-30deg);
       }
       20% {
         transform: translate(0, 10%) rotate(10deg);
@@ -85,7 +85,7 @@
       transform: translate(0, 1);
     }
     10% {
-      transform: translate(0, -10%) rotate(20deg);
+      transform: translate(0, -10%) rotate(30deg);
     }
     20% {
       transform: translate(0, 10%) rotate(-10deg);
@@ -101,3 +101,21 @@
     }
   }
 
+  @keyframes loader-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+
+  @keyframes body-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }

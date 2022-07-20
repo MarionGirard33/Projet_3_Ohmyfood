@@ -1,6 +1,8 @@
 body {
     font-family: "roboto",sans-serif;
     counter-reset: step;
+    z-index: 0;
+    animation: body-in 1000ms 3000ms ;
     a {
         color: black;
         text-decoration: none;

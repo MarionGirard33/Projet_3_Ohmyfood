@@ -1,14 +1,18 @@
 .loader {
-    height: 100vh;
+    position: fixed;
+    height: 100%;
+    width: 100%;
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $background_gray;
+    z-index: 1;
+    animation: loader-out 1000ms 3000ms forwards;
 
     &__tub {
         display: flex;
-        width: 160px;
+        width: 180px;
         justify-content: space-between;
         position: relative;
         top: 50px;
@@ -20,10 +24,26 @@
         justify-content: center;
         align-items: center;
     }
+    &__salad {
+      position: absolute;
+      bottom: 30px; left: 15px;
+      width: 90px;
+      height: 18px;
+      border-radius: 40px 40px 0 0;
+      background: $tertiary_green;
+    }
+    &__steack {
+      position: absolute;
+      bottom: 30px; right: 20px;
+      width: 70px;
+      height: 12px;
+      border-radius: 25px 25px 0 0;
+      background: $primary_purple;
+    }
     &__plate {
-        width: 150px;
-        height: 20px;
-        background-color: #FF79DA;
+        width: 200px;
+        height: 30px;
+        background-color: $secondary_pink;
         border-radius: 0 0 60px 60px;
         position: relative;
         top: 20px;
@@ -32,17 +52,17 @@
 
 .green_tub {
     transform-origin: 0% 50%;
-    width: 40px;
-    height: 100px;
-    background: #99E2D0;
+    width: 60px;
+    height: 120px;
+    background: $tertiary_green;
     animation: green-tub $ingredient-timing infinite backwards;
 }
 .purple_tub {
     transform-origin: 100% 50%;
-    width: 40px;
-    height: 100px;
-    background: #9356DC;
-    animation: purple-tub $ingredient-timing 500ms infinite backwards;
+    width: 50px;
+    height: 110px;
+    background: $primary_purple;
+    animation: purple-tub $ingredient-timing infinite 500ms backwards;
 }
   
 .green_ingredient {
@@ -50,7 +70,7 @@
     width: 10px;
     height: 10px;
     border-radius: 25px;
-    background: #99E2D0;
+    background: $tertiary_green;
     opacity: 1;
     &--1 {
         top: -15px;
@@ -89,7 +109,7 @@
     width: 8px;
     height: 8px;
     border-radius: 25px;
-    background-color: #9356DC;
+    background-color: $primary_purple;
     opacity: 1;
     &--1 {
         top: 32px;
