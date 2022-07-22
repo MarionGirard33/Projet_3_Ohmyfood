@@ -721,8 +721,10 @@ footer ul i {
   position: relative;
   font-size: 1.4em;
 }
-.restaurant img {
-  width: 95%;
+@media screen and (min-width: 768px) {
+  .restaurant img {
+    width: 240px;
+  }
 }
 .restaurant i {
   position: absolute;

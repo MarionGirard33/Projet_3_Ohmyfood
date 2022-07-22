@@ -2,7 +2,9 @@
     position: relative;
     font-size: 1.4em;
     img {
-        width: 95%;
+        @include breakpoint(medium){
+            width: 240px;
+        }
     }
     i {
         position: absolute;
