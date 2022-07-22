@@ -4,14 +4,33 @@ footer {
     color: #fff;
     background-color: #353535;
     padding: 8px 0 0 23px;
+    @include breakpoint(medium){
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0 0 0;
+        height: 90px;
+    }
+    @include breakpoint(medium){
+        h4 {
+            margin-right: 22px;
+        }
+    }
     ul {
         padding-left: 0px;
         line-height: 25px;
-
+        @include breakpoint(medium){
+            display: flex;
+            flex-direction: row;
+        }
         a {
             color: #fff;
             display: flex;
             align-items: center;
+            @include breakpoint(medium){
+                padding-left: 25px;
+            }
         }
         i {
             width: 13px;

@@ -1,8 +1,8 @@
+/*mixin des boutons*/
 @mixin button {
     color: white;
-    font-size: 1em;
     background: linear-gradient(to bottom right,$secondary-pink,$primary_purple);
-    padding: 5% 8% 5% 8%;
+    padding: 17px 25px 17px 25px;
     margin-top: 10px;
     border: none;
     border-radius: 10rem;
@@ -14,6 +14,7 @@
     }
 }
 
+/*mixin des survols*/
 @mixin hover {
     &:hover{
     box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 15);
@@ -31,6 +32,7 @@
     }
 }
 
+/*mixin animation des coeurs*/
 @mixin heart {
     .empty-heart {
         font-size: 1.6em;
@@ -52,5 +54,33 @@
         &:hover {       
             animation : full-heart 600ms linear forwards;
         }
+    }
+}
+
+/*mixin des breakpoints*/
+@mixin breakpoint($bp){
+    @if $bp == small{
+        @media screen and (min-width: $bp-S) {
+            @content;
+        }
+    }
+    @else if $bp == medium{
+        @media screen and (min-width: $bp-M) {
+            @content;
+        }
+    }
+    @else if $bp == large{
+        @media screen and (min-width: $bp-L) {
+            @content;
+        }
+    }
+    @else if $bp == xlarge{
+        @media screen and (min-width: $bp-XL) {
+            @content;
+        }
+    }
+    @else {
+        @error
+            "L'agument $bp ne peut valoir que small, medium large ou xlarge"
     }
 }

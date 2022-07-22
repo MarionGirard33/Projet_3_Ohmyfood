@@ -30,12 +30,6 @@
   }
 
   /*animation loader*/
-
-  
-  $ingredient-timing: 2000ms;
-  $nb-ingredient:6;
-  $ingredient-delay: $ingredient-timing / $nb-ingredient;
-  
 @keyframes ingredient {
   0% {
     transform: scale(0);
@@ -108,14 +102,5 @@
     100% {
         opacity: 0;
         visibility: hidden;
-    }
-  }
-
-  @keyframes body-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
   }

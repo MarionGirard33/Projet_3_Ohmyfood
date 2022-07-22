@@ -1,5 +1,4 @@
 /*Déclaration des couleurs*/
-
 $primary_purple:#9356DC;
 $secondary_pink:#FF79DA;
 $tertiary_green:#99E2D0;
@@ -8,4 +7,15 @@ $background_gray: #f6f6f6;
 
 $hover_purple: lighten($color: $primary_purple, $amount: 3);
 $hover_pink: lighten($color: $secondary_pink, $amount: 3);
-$hover-background: darken($color: $background_gray, $amount: 30)
+$hover-background: darken($color: $background_gray, $amount: 30);
+
+/*Timing et quantité animation loader*/
+$ingredient-timing: 2000ms;
+$nb-ingredient:6;
+$ingredient-delay: calc($ingredient-timing / $nb-ingredient);
+
+/*Déclaration des breakpoints*/
+$bp-S: 480px !default; /*smartphone paysage ou tablette portrait*/
+$bp-M: 768px !default; /*tablette paysage ou petit desktop*/
+$bp-L: 1224px !default; /*desktop*/
+$bp-XL: 1824px !default; /*grand desktop*/

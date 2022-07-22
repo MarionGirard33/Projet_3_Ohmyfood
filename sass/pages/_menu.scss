@@ -31,6 +31,9 @@
     }
     .button {
         margin: 45px 80px 20px 80px;
+        @include breakpoint(small){
+            margin: 45px 160px 20px 160px;
+        }
     }
     @include heart {
         right: 30px; top: 40px;
@@ -46,8 +49,11 @@
         flex-direction: row;
         margin-right: 10px;
         position: relative;
-        animation: menus-appear 1000ms linear backwards;
+        /*animation: menus-appear 1000ms linear backwards;*/
         transform: translateY(5px);
+        @include breakpoint(small){
+            margin: 0 25px 0 20px;
+        }
         &__info {
             width:100%;
             height: 70px;
@@ -60,7 +66,6 @@
             box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
             overflow: hidden;
         }
-
         &__description {
             white-space: nowrap;
             overflow: hidden;
@@ -78,12 +83,10 @@
                 text-overflow: ellipsis;
             }
         }
-
         &__price {
             font-weight: bold;
             padding: 40px 30px 0 0;
         }
-        
         &--checked {
             width: 0%;
             height: 70px;
@@ -104,14 +107,12 @@
                 transition: transform 500ms ease-in-out;
               }
         }
-
         &:hover &--checked{
             width: 20%;
             height: 70px;
             transform: translate(0);
             box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
         } 
-
         &:hover .fa-circle-check {
             transform: rotate(0deg);
         }
