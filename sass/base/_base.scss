@@ -1,8 +1,7 @@
 body {
-    height: auto;
+    width: 100%;
     font-family: "roboto",sans-serif;
     counter-reset: step;
-    z-index: 0;
     a {
         color: black;
         text-decoration: none;
@@ -34,24 +33,25 @@ h1, h2, h3 {
     font-weight: 900;
 }
 
-h5 {
-    font-family: "Shrikhand", sans-serif;
-    font-weight: 500;
-    font-size: 1.7em;
-    @include breakpoint(medium){
-        font-size: 2em;
+.card{
+    h1 {
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 500;
+        font-size: 1.8em;
+        @include breakpoint(medium){
+            font-size: 2em;
+        }
     }
-}
-
-h6 {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1em;
-    @include breakpoint(medium){
-        font-size: 1.2em;
-    }
-    @include breakpoint(large){
-        font-size: 1.3em;
+    h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1em;
+        @include breakpoint(medium){
+            font-size: 1.2em;
+        }
+        @include breakpoint(large){
+            font-size: 1.3em;
+        }
     }
 }
 
@@ -74,15 +74,9 @@ h6 {
 }
 
 .button {
-    font-size: 1em;
-    @include breakpoint(small){
-        font-size: 1.2em;
-    }
+    font-size: 1.1em;
     @include breakpoint(medium){
         font-size: 1.3em;
-    }
-    @include breakpoint(large){
-        font-size: 1.4em;
     }
 }
 
@@ -100,7 +94,7 @@ h6 {
     p, span {
         font-size: 0.9em;
     }
-    @include breakpoint(small){
+    @include breakpoint(medium){
         font-size: 1.1em;
     }
 }

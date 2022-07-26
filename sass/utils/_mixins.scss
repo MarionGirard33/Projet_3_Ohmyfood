@@ -60,27 +60,22 @@
 /*mixin des breakpoints*/
 @mixin breakpoint($bp){
     @if $bp == small{
-        @media screen and (min-width: $bp-S) {
+        @media screen and (max-width: $bp-S) {
             @content;
         }
     }
     @else if $bp == medium{
-        @media screen and (min-width: $bp-M) {
+        @media screen and (min-width: $bp-S) {
             @content;
         }
     }
     @else if $bp == large{
-        @media screen and (min-width: $bp-L) {
-            @content;
-        }
-    }
-    @else if $bp == xlarge{
-        @media screen and (min-width: $bp-XL) {
+        @media screen and (min-width: $bp-M) {
             @content;
         }
     }
     @else {
         @error
-            "L'agument $bp ne peut valoir que small, medium large ou xlarge"
+            "L'agument $bp ne peut valoir que small, medium ou large"
     }
 }

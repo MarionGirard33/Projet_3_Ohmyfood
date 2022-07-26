@@ -8,7 +8,7 @@
     align-items: center;
     background-color: $background_gray;
     z-index: 1;
-    animation: loader-out 1000ms 3000ms forwards;
+    animation: loader-out 1ms 1ms forwards;
 
     &__tub {
         display: flex;

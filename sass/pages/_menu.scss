@@ -1,5 +1,5 @@
 .restaurant {
-    position: relative;
+    width: 100%;
     font-size: 1.4em;
     img {
         @include breakpoint(medium){
@@ -34,81 +34,75 @@
     @include breakpoint(medium){
         align-items: center;
     }
-    h5 {
-        margin: 38px 0 0 0;
+    h1 {
+        margin: 38px 0 6px 0;
     }
     .button {
-        margin: 45px 80px 20px 80px;
-        @include breakpoint(small){
-            margin: 45px 160px 20px 160px;
-        }
-    }
-    @include heart {
-        right: 30px; top: 40px;
-        @include breakpoint(medium){
-            right: 200px; top:45px;
-        }
-        @include breakpoint(xlarge){
-            right: 600px; top:45px;
-        }
+        width: 180px;
+        margin: auto;
+        margin-top: 50px;
     }
     .meal {
         @include breakpoint(large){
+            width: 100%;
+            max-width: 1600px;
             display: flex;
             flex-direction:row;
             margin: 50px 0 40px 0;
         }
     }
+    @include heart {
+        right: 6%; top: 40px;
+        @include breakpoint(medium){
+            right: 8%; top:45px;
+        }
+    }
+    
 }
 
 .menu {
-    width: 100%;
-    h6 {
-        padding-bottom: 6px;
-        margin: 30px 0 8px 0;
-        width: 40px;
-        border-bottom: solid 3px $tertiary_green;
-        text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    h2 {
+        margin: 30px 0 15px 0;
         @include breakpoint(medium){
-            width: 120px;
             margin-bottom: 20px;
         }
+        span {
+            padding-bottom: 6px;
+            border-bottom: solid 3px $tertiary_green;
+            overflow: hidden;
+        } 
+    }
+    @include breakpoint(medium){
+        width: 700px;
+    }
+    @include breakpoint(large){
+        width: 30%;
+        margin: auto;
     }
     &__item {
+        width:100%;
+        height: 70px;
+        background-color: #ffffff;
+        overflow: hidden;
         display: flex;
         flex-direction: row;
-        margin-right: 10px;
-        position: relative;
+        margin: 6px 0 7px 0;
+        border-radius: 15px;
         animation: menus-appear 1000ms linear backwards;
         transform: translateY(5px);
-        @include breakpoint(small){
-            margin: 0 25px 0 20px;
-        }
-        @include breakpoint(medium){
-            width: 700px;
-        }
-        @include breakpoint(large){
-            width: 370px;
-        }
-        @include breakpoint(xlarge){
-            width: 550px;
-        }
         &__info {
             width:100%;
-            height: 70px;
-            background-color: #ffffff;
+            overflow: hidden;
             display: flex;
             justify-content: space-between;
-            border-radius: 12px;
             padding-left: 12px;
-            margin-bottom: 12px;
             box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
-            overflow: hidden;
         }
         &__description {
-            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
             h3 {
                 margin: 12px 10px 0 0;
                 white-space: nowrap;
@@ -127,7 +121,7 @@
             padding: 40px 30px 0 0;
         }
         &--checked {
-            width: 0%;
+            width: 0;
             height: 70px;
             display: flex;
             justify-content: center;
@@ -135,11 +129,6 @@
             color: #ffffff;
             background-color: $tertiary_green;
             font-size: 1.2em;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 15px;
-            position: relative;
-            right:10px;
-            transform: translate(9999px);
             transition: width 500ms ease-in-out;
             .fa-circle-check {
                 transform: rotate(-360deg);
@@ -147,19 +136,12 @@
               }
         }
         &:hover &--checked{
-            width: 100px;
-            height: 70px;
-            transform: translate(0);
+            width: 22%;
             box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
         } 
         &:hover .fa-circle-check {
             transform: rotate(0deg);
         }
-    }
-    @include breakpoint(medium){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 }
 

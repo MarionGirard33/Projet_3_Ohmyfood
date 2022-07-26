@@ -1,6 +1,5 @@
 footer {
     height: 190px;
-    width: 100%;
     color: #fff;
     background-color: #353535;
     padding: 8px 0 0 23px;
@@ -11,8 +10,6 @@ footer {
         align-items: center;
         padding: 8px 0 0 0;
         height: 90px;
-    }
-    @include breakpoint(medium){
         h4 {
             margin-right: 22px;
         }

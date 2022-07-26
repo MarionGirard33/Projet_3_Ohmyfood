@@ -2,10 +2,9 @@
 /*Déclaration des couleurs*/
 /*Timing et quantité animation loader*/
 /*Déclaration des breakpoints*/
-/*smartphone paysage ou tablette portrait*/
+/*smartphone ou tablette portrait*/
 /*tablette paysage ou petit desktop*/
 /*desktop*/
-/*grand desktop*/
 /*mixin des boutons*/
 /*mixin des survols*/
 /*mixin animation des coeurs*/
@@ -111,10 +110,9 @@
   }
 }
 body {
-  height: auto;
+  width: 100%;
   font-family: "roboto", sans-serif;
   counter-reset: step;
-  z-index: 0;
 }
 body a {
   color: black;
@@ -137,7 +135,7 @@ h1 {
 h3 {
   font-size: 1.1em;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   h3 {
     font-size: 1.2em;
   }
@@ -147,29 +145,28 @@ h1, h2, h3 {
   font-weight: 900;
 }
 
-h5 {
+.card h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
-  font-size: 1.7em;
+  font-size: 1.8em;
 }
 @media screen and (min-width: 768px) {
-  h5 {
+  .card h1 {
     font-size: 2em;
   }
 }
-
-h6 {
+.card h2 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 1em;
 }
 @media screen and (min-width: 768px) {
-  h6 {
+  .card h2 {
     font-size: 1.2em;
   }
 }
-@media screen and (min-width: 1224px) {
-  h6 {
+@media screen and (min-width: 992px) {
+  .card h2 {
     font-size: 1.3em;
   }
 }
@@ -177,7 +174,7 @@ h6 {
 .location input {
   font-weight: 700;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   .location input {
     font-size: 1.4em;
   }
@@ -186,28 +183,18 @@ h6 {
 .exploration p {
   font-size: 1.1em;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   .exploration p {
     font-size: 1.4em;
   }
 }
 
 .button {
-  font-size: 1em;
-}
-@media screen and (min-width: 480px) {
-  .button {
-    font-size: 1.2em;
-  }
+  font-size: 1.1em;
 }
 @media screen and (min-width: 768px) {
   .button {
     font-size: 1.3em;
-  }
-}
-@media screen and (min-width: 1224px) {
-  .button {
-    font-size: 1.4em;
   }
 }
 
@@ -222,7 +209,7 @@ h6 {
 .restaurants__card p, .restaurants__card span {
   font-size: 0.9em;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .restaurants__card {
     font-size: 1.1em;
   }
@@ -238,7 +225,7 @@ h6 {
   align-items: center;
   background-color: #f6f6f6;
   z-index: 1;
-  animation: loader-out 1000ms 3000ms forwards;
+  animation: loader-out 1ms 1ms forwards;
 }
 .loader__tub {
   display: flex;
@@ -430,7 +417,6 @@ header img {
 
 footer {
   height: 190px;
-  width: 100%;
   color: #fff;
   background-color: #353535;
   padding: 8px 0 0 23px;
@@ -444,8 +430,6 @@ footer {
     padding: 8px 0 0 0;
     height: 90px;
   }
-}
-@media screen and (min-width: 768px) {
   footer h4 {
     margin-right: 22px;
   }
@@ -508,48 +492,34 @@ footer ul i {
 
 .functioning {
   width: 100%;
-  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
 }
 .functioning h2 {
   padding: 20px 0 8px 20px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .functioning {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-bottom: 30px;
-  }
-  .functioning h2 {
-    padding-left: 0;
   }
 }
 .functioning__steps {
   padding-left: 0px;
   width: 100%;
 }
-@media screen and (min-width: 480px) {
-  .functioning__steps {
-    width: 70%;
-  }
-}
 @media screen and (min-width: 768px) {
   .functioning__steps {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    margin: auto;
     width: 90%;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   .functioning__steps {
     justify-content: space-around;
-    width: 80%;
-  }
-}
-@media screen and (min-width: 1224px) {
-  .functioning__steps {
-    width: 70%;
+    max-width: 1400px;
   }
 }
 .functioning__steps li {
@@ -591,15 +561,10 @@ footer ul i {
     padding: 30px 20px 15px 25px;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   .functioning__steps li {
     margin: 0 15px 25px 30px;
     padding: 30px 30px 15px 35px;
-  }
-}
-@media screen and (min-width: 1824px) {
-  .functioning__steps li {
-    padding: 30px 50px 15px 55px;
   }
 }
 .functioning__steps i {
@@ -611,7 +576,7 @@ footer ul i {
     margin-right: 5px;
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   .functioning__steps i {
     margin-right: 20px;
   }
@@ -630,23 +595,6 @@ footer ul i {
     justify-content: center;
   }
 }
-.restaurants article {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .restaurants article {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 1824px) {
-  .restaurants article {
-    flex-wrap: nowrap;
-  }
-}
 .restaurants img {
   height: 175px;
   width: 100%;
@@ -663,9 +611,22 @@ footer ul i {
   top: 12px;
   right: 12px;
 }
+.restaurants__list {
+  width: 100%;
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .restaurants__card {
   width: 100%;
-  height: 250px;
+  height: 258px;
   background-color: white;
   border-radius: 18px;
   margin: 0 0 22px 0;
@@ -710,7 +671,7 @@ footer ul i {
     margin: 10px 10px 22px 10px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .restaurants__card {
     width: 45%;
     margin: 10px 20px 22px 20px;
@@ -718,7 +679,7 @@ footer ul i {
 }
 
 .restaurant {
-  position: relative;
+  width: 100%;
   font-size: 1.4em;
 }
 @media screen and (min-width: 768px) {
@@ -737,7 +698,7 @@ footer ul i {
   height: 270px;
   object-fit: cover;
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 992px) {
   .banner img {
     height: 500px;
   }
@@ -757,33 +718,33 @@ footer ul i {
     align-items: center;
   }
 }
-.card h5 {
-  margin: 38px 0 0 0;
+.card h1 {
+  margin: 38px 0 6px 0;
 }
 .card .button {
-  margin: 45px 80px 20px 80px;
+  width: 180px;
+  margin: auto;
+  margin-top: 50px;
 }
-@media screen and (min-width: 480px) {
-  .card .button {
-    margin: 45px 160px 20px 160px;
+@media screen and (min-width: 992px) {
+  .card .meal {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 40px 0;
   }
 }
 .card .empty-heart {
   font-size: 1.6em;
   position: absolute;
-  right: 30px;
+  right: 6%;
   top: 40px;
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .card .empty-heart {
-    right: 200px;
-    top: 45px;
-  }
-}
-@media screen and (min-width: 1824px) {
-  .card .empty-heart {
-    right: 600px;
+    right: 8%;
     top: 45px;
   }
 }
@@ -793,7 +754,7 @@ footer ul i {
 .card .full-heart {
   font-size: 1.6em;
   position: absolute;
-  right: 30px;
+  right: 6%;
   top: 40px;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
@@ -802,87 +763,65 @@ footer ul i {
 }
 @media screen and (min-width: 768px) {
   .card .full-heart {
-    right: 200px;
-    top: 45px;
-  }
-}
-@media screen and (min-width: 1824px) {
-  .card .full-heart {
-    right: 600px;
+    right: 8%;
     top: 45px;
   }
 }
 .card .full-heart:hover {
   animation: full-heart 600ms linear forwards;
 }
-@media screen and (min-width: 1224px) {
-  .card .meal {
-    display: flex;
-    flex-direction: row;
-    margin: 50px 0 40px 0;
-  }
-}
 
 .menu {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 }
-.menu h6 {
-  padding-bottom: 6px;
-  margin: 30px 0 8px 0;
-  width: 40px;
-  border-bottom: solid 3px #99E2D0;
-  text-align: center;
+.menu h2 {
+  margin: 30px 0 15px 0;
 }
 @media screen and (min-width: 768px) {
-  .menu h6 {
-    width: 120px;
+  .menu h2 {
     margin-bottom: 20px;
   }
 }
-.menu__item {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10px;
-  position: relative;
-  animation: menus-appear 1000ms linear backwards;
-  transform: translateY(5px);
-}
-@media screen and (min-width: 480px) {
-  .menu__item {
-    margin: 0 25px 0 20px;
-  }
+.menu h2 span {
+  padding-bottom: 6px;
+  border-bottom: solid 3px #99E2D0;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  .menu__item {
+  .menu {
     width: 700px;
   }
 }
-@media screen and (min-width: 1224px) {
-  .menu__item {
-    width: 370px;
+@media screen and (min-width: 992px) {
+  .menu {
+    width: 30%;
+    margin: auto;
   }
 }
-@media screen and (min-width: 1824px) {
-  .menu__item {
-    width: 550px;
-  }
-}
-.menu__item__info {
+.menu__item {
   width: 100%;
   height: 70px;
   background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 6px 0 7px 0;
+  border-radius: 15px;
+  animation: menus-appear 1000ms linear backwards;
+  transform: translateY(5px);
+}
+.menu__item__info {
+  width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
-  border-radius: 12px;
   padding-left: 12px;
-  margin-bottom: 12px;
   box-shadow: 4px 4px 8px #dddddd;
-  overflow: hidden;
 }
 .menu__item__description {
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu__item__description h3 {
   margin: 12px 10px 0 0;
@@ -901,7 +840,7 @@ footer ul i {
   padding: 40px 30px 0 0;
 }
 .menu__item--checked {
-  width: 0%;
+  width: 0;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -909,11 +848,6 @@ footer ul i {
   color: #ffffff;
   background-color: #99E2D0;
   font-size: 1.2em;
-  border-radius: 0 12px 12px 0;
-  margin-bottom: 15px;
-  position: relative;
-  right: 10px;
-  transform: translate(9999px);
   transition: width 500ms ease-in-out;
 }
 .menu__item--checked .fa-circle-check {
@@ -921,20 +855,11 @@ footer ul i {
   transition: transform 500ms ease-in-out;
 }
 .menu__item:hover .menu__item--checked {
-  width: 100px;
-  height: 70px;
-  transform: translate(0);
+  width: 22%;
   box-shadow: 4px 4px 8px #dddddd;
 }
 .menu__item:hover .fa-circle-check {
   transform: rotate(0deg);
-}
-@media screen and (min-width: 768px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .delay-1 {

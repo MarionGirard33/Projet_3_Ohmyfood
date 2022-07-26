@@ -15,7 +15,6 @@ $nb-ingredient:6;
 $ingredient-delay: calc($ingredient-timing / $nb-ingredient);
 
 /*Déclaration des breakpoints*/
-$bp-S: 480px !default; /*smartphone paysage ou tablette portrait*/
-$bp-M: 768px !default; /*tablette paysage ou petit desktop*/
+$bp-S: 768px !default; /*smartphone ou tablette portrait*/
+$bp-M: 992px !default; /*tablette paysage ou petit desktop*/
 $bp-L: 1224px !default; /*desktop*/
-$bp-XL: 1824px !default; /*grand desktop*/
