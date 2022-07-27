@@ -2,11 +2,15 @@
 @keyframes menus-appear {
     0% {
         opacity:(0);
-        transform: translateY(0);
+        transform: translateY(5px);
+    }
+    50% {
+      opacity:(1);
+      transform: translateY(2.5px);
     }
     100% {
         opacity:(1);
-        transform: translateY(5px);
+        transform: translateY(0px);
     }
   }
 
@@ -55,7 +59,7 @@
 
 @keyframes green-tub {
     0% {
-        transform: translate(0, 1);
+        transform: translate(0, 10%);
       }
       10% {
         transform: translate(0, -10%) rotate(-30deg) ;
@@ -70,13 +74,13 @@
         transform: rotate(-10deg);
       }
       100% {
-        transform: translate(0,1) rotate(0deg);
+        transform: translate(0,10%) rotate(0deg);
       }
   }
 
 @keyframes purple-tub {
     0% {
-      transform: translate(0, 1);
+      transform: translate(0, 10%);
     }
     10% {
       transform: translate(0, -10%) rotate(30deg);
@@ -91,7 +95,7 @@
         transform: rotate(10deg);
       }
     100% {
-      transform: translate(0,1) rotate(0deg);
+      transform: translate(0,10%) rotate(0deg);
     }
   }
 

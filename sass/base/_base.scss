@@ -1,3 +1,4 @@
+/*Général*/
 body {
     width: 100%;
     font-family: "roboto",sans-serif;
@@ -9,17 +10,17 @@ body {
     ul {
         list-style-type: none;
     }
-
 }
 
-h4 {
-    font-family: "Shrikhand", sans-serif;
-    font-weight: 500;
+.button {
     font-size: 1.1em;
+    @include breakpoint(medium){
+        font-size: 1.3em;
+    }
 }
 
-h1 {
-    font-size: 1.5em;
+h1, h2, h3 {
+    font-weight: 900;
 }
 
 h3 {
@@ -29,30 +30,16 @@ h3 {
     }
 }
 
-h1, h2, h3 {
-    font-weight: 900;
+h4 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
-.card{
-    h1 {
-        font-family: "Shrikhand", sans-serif;
-        font-weight: 500;
-        font-size: 1.8em;
-        @include breakpoint(medium){
-            font-size: 2em;
-        }
-    }
-    h2 {
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 1em;
-        @include breakpoint(medium){
-            font-size: 1.2em;
-        }
-        @include breakpoint(large){
-            font-size: 1.3em;
-        }
-    }
+/*Accueil*/
+
+h1 {
+    font-size: 1.5em;
 }
 
 .location {
@@ -73,13 +60,6 @@ h1, h2, h3 {
     }
 }
 
-.button {
-    font-size: 1.1em;
-    @include breakpoint(medium){
-        font-size: 1.3em;
-    }
-}
-
 .functioning {
     li {
         font-weight: 900;
@@ -90,17 +70,38 @@ h1, h2, h3 {
     }
 }
 
-.restaurants__card {
+.restaurant-card {
     p, span {
-        font-size: 0.9em;
+        font-size: 1em;
     }
     @include breakpoint(medium){
         font-size: 1.1em;
     }
 }
 
+/*menus*/
 
-
+.card {
+    h1 {
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 500;
+        font-size: 1.8em;
+        @include breakpoint(medium){
+            font-size: 2em;
+        }
+    }
+    h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1em;
+        @include breakpoint(medium){
+            font-size: 1.2em;
+        }
+        @include breakpoint(large){
+            font-size: 1.3em;
+        }
+    }
+}
 
 
 

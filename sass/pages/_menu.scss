@@ -1,4 +1,4 @@
-.restaurant {
+.header--restaurant {
     width: 100%;
     font-size: 1.4em;
     img {
@@ -37,12 +37,7 @@
     h1 {
         margin: 38px 0 6px 0;
     }
-    .button {
-        width: 180px;
-        margin: auto;
-        margin-top: 50px;
-    }
-    .meal {
+    &__meal {
         @include breakpoint(large){
             width: 100%;
             max-width: 1600px;
@@ -57,7 +52,11 @@
             right: 8%; top:45px;
         }
     }
-    
+    .button {
+        width: 180px;
+        margin: auto;
+        margin-top: 50px;
+    }
 }
 
 .menu {
@@ -72,7 +71,6 @@
         span {
             padding-bottom: 6px;
             border-bottom: solid 3px $tertiary_green;
-            overflow: hidden;
         } 
     }
     @include breakpoint(medium){
@@ -82,68 +80,68 @@
         width: 30%;
         margin: auto;
     }
-    &__item {
+}
+
+.menu-item {
+    width:100%;
+    height: 70px;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 6px 0 7px 0;
+    border-radius: 15px;
+    animation: menus-appear 600ms linear backwards;
+    transform: translateY(0px);
+    &__info {
         width:100%;
-        height: 70px;
-        background-color: #ffffff;
         overflow: hidden;
         display: flex;
-        flex-direction: row;
-        margin: 6px 0 7px 0;
-        border-radius: 15px;
-        animation: menus-appear 1000ms linear backwards;
-        transform: translateY(5px);
-        &__info {
-            width:100%;
+        justify-content: space-between;
+        padding-left: 12px;
+        box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+    }
+    &__description {
+        overflow: hidden;
+        p {
+            margin: 12px 10px 0 0;
+            white-space: nowrap;
             overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 12px;
-            box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+            text-overflow: ellipsis;
         }
-        &__description {
-            overflow: hidden;
-            h3 {
-                margin: 12px 10px 0 0;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            p {
-                margin: 8px 10px 0 0;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        &__price {
-            font-weight: bold;
-            padding: 40px 30px 0 0;
-        }
-        &--checked {
-            width: 0;
-            height: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            background-color: $tertiary_green;
-            font-size: 1.2em;
-            transition: width 500ms ease-in-out;
-            .fa-circle-check {
-                transform: rotate(-360deg);
-                transition: transform 500ms ease-in-out;
-              }
-        }
-        &:hover &--checked{
-            width: 22%;
-            box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
-        } 
-        &:hover .fa-circle-check {
-            transform: rotate(0deg);
+        h3 {
+            @extend p;
+            margin: 8px 10px 0 0;
         }
     }
+    &__price {
+        font-weight: bold;
+        padding: 40px 30px 0 0;
+    }
+    &--checked {
+        width: 0;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        background-color: $tertiary_green;
+        font-size: 1.2em;
+        transition: width 500ms ease-in-out;
+        .fa-circle-check {
+            transform: rotate(-360deg);
+            transition: transform 500ms ease-in-out;
+            }
+    }
+    &:hover &--checked{
+        width: 22%;
+        box-shadow: 4px 4px 8px darken($color: $background_gray, $amount: 10);
+    } 
+    &:hover .fa-circle-check {
+        transform: rotate(0deg);
+    }
 }
+
 
 @for $i from 1 through 4 {
     .delay-#{$i}{
